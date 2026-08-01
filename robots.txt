@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Pastas de trabalho - nao sao conteudo do site
+Disallow: /design-referencia/
+Disallow: /claude-seo/
+Disallow: /claude%20SEO/
+Disallow: /5gserralheria-audit/
+
+Sitemap: https://5gserralheria.ayamdigital.com.br/sitemap.xml

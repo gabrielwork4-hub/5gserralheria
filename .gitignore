@@ -1,0 +1,23 @@
+# --- Ferramenta de terceiros (repositório próprio, 7,3 MB / 408 arquivos) ---
+claude-seo/
+claude SEO/
+
+# --- Notas internas de trabalho ---
+# NÃO versionar: o Cloudflare Pages serve tudo que está no repositório, então
+# qualquer arquivo aqui vira URL pública. Esta pasta tem o plano de entrega,
+# o log de incidentes e o backup pré-migração — nada disso é para o cliente.
+5gserralheria-audit/
+
+# --- Originais não usados pelo site ---
+assets/img/_originais/
+
+# --- Sistema operacional / editor ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# --- Python ---
+__pycache__/
+*.pyc

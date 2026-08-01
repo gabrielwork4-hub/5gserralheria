@@ -1,0 +1,21 @@
+# Cloudflare Pages - Header rules for maximum static performance
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Immuntable Cache for WebP Images
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache for CSS and JS
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML Pages (short revalidation)
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
