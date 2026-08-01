@@ -42,35 +42,55 @@ def url_of(page):
     return "/" + page.replace(os.sep, "/").replace("index.html", "")
 
 
+def prefixo(page):
+    """'../' por nível de profundidade. Os caminhos precisam ser RELATIVOS: o
+    site roda tanto na raiz de um domínio (Cloudflare Pages) quanto em
+    subcaminho (GitHub Pages, /5gserralheria/), e '/assets/...' quebraria no
+    segundo caso."""
+    return "../" * page.replace(os.sep, "/").count("/")
+
+
+def link(page, destino):
+    """Converte um caminho absoluto do site ('/servicos/') em relativo à página."""
+    p = prefixo(page)
+    if destino == "/":
+        return p if p else "./"
+    if destino.startswith("/#"):
+        return p + destino[1:]
+    return p + destino.lstrip("/")
+
+
 def header_html(page):
     u = url_of(page)
     serv_active = " active" if u.startswith("/servicos/") else ""
     blog_active = " active" if u.startswith("/blog/") else ""
     cont_active = " active" if u == "/contato/" else ""
 
+    L = lambda d: link(page, d)
     items = []
     for slug, label in SERVICES:
         cls = ' class="active"' if u == "/servicos/%s/" % slug else ""
-        items.append('            <a href="/servicos/%s/"%s>%s</a>' % (slug, cls, label))
+        items.append('            <a href="%s"%s>%s</a>'
+                     % (L("/servicos/%s/" % slug), cls, label))
     drop = "\n".join(items)
 
     return """<header class="header">
     <div class="container header-container">
-      <a href="/" class="logo" aria-label="Página inicial da 5G Serralheria">
-        <img src="/assets/img/logo-5g-serralheria.webp" alt="Logo Oficial 5G Serralheria" class="logo-img" width="52" height="52">
+      <a href="{home}" class="logo" aria-label="Página inicial da 5G Serralheria">
+        <img src="{logo}" alt="Logo Oficial 5G Serralheria" class="logo-img" width="52" height="52">
       </a>
 
       <nav class="nav-links" aria-label="Menu principal">
         <div class="nav-item-dropdown">
-          <a href="/servicos/" class="nav-link{sa}">Serviços<span class="nav-caret" aria-hidden="true"></span></a>
+          <a href="{serv}" class="nav-link{sa}">Serviços<span class="nav-caret" aria-hidden="true"></span></a>
           <div class="nav-dropdown">
 {drop}
-            <a href="/servicos/" class="nav-dropdown-all">Ver todos os serviços</a>
+            <a href="{serv}" class="nav-dropdown-all">Ver todos os serviços</a>
           </div>
         </div>
-        <a href="/#portfolio" class="nav-link">Portfólio</a>
-        <a href="/blog/" class="nav-link{ba}">Blog</a>
-        <a href="/contato/" class="nav-link{ca}">Contato</a>
+        <a href="{portf}" class="nav-link">Portfólio</a>
+        <a href="{blog}" class="nav-link{ba}">Blog</a>
+        <a href="{cont}" class="nav-link{ca}">Contato</a>
       </nav>
 
       <div class="header-cta">
@@ -85,41 +105,49 @@ def header_html(page):
       </button>
     </div>
   </header>""".format(sa=serv_active, ba=blog_active, ca=cont_active, drop=drop,
-                      tel=TEL, telf=TEL_FMT, wa=WA)
+                      tel=TEL, telf=TEL_FMT, wa=WA,
+                      home=L("/"), logo=L("/assets/img/logo-5g-serralheria.webp"),
+                      serv=L("/servicos/"), portf=L("/#portfolio"),
+                      blog=L("/blog/"), cont=L("/contato/"))
 
 
 def mobile_html(page):
     u = url_of(page)
+    L = lambda d: link(page, d)
     subs = []
     for slug, label in SERVICES:
         a = " active" if u == "/servicos/%s/" % slug else ""
-        subs.append('    <a href="/servicos/%s/" class="nav-link sub%s">%s</a>' % (slug, a, label))
+        subs.append('    <a href="%s" class="nav-link sub%s">%s</a>'
+                    % (L("/servicos/%s/" % slug), a, label))
     blog_active = " active" if u.startswith("/blog/") else ""
     cont_active = " active" if u == "/contato/" else ""
 
     return """<div class="mobile-menu" id="mobileMenu">
     <span class="mobile-menu-label">Serviços</span>
-    <a href="/servicos/" class="nav-link">Ver todos os serviços</a>
+    <a href="{serv}" class="nav-link">Ver todos os serviços</a>
 {subs}
     <span class="mobile-menu-label">Navegação</span>
-    <a href="/#portfolio" class="nav-link">Portfólio</a>
-    <a href="/blog/" class="nav-link{ba}">Blog</a>
-    <a href="/contato/" class="nav-link{ca}">Contato</a>
+    <a href="{portf}" class="nav-link">Portfólio</a>
+    <a href="{blog}" class="nav-link{ba}">Blog</a>
+    <a href="{cont}" class="nav-link{ca}">Contato</a>
     <a href="{wa}" class="btn btn-whatsapp" target="_blank" rel="noopener">Falar no WhatsApp</a>
     <a href="tel:{tel}" class="mobile-phone">{telf}</a>
   </div>""".format(subs="\n".join(subs), ba=blog_active, ca=cont_active,
-                   wa=WA, tel=TEL, telf=TEL_FMT)
+                   wa=WA, tel=TEL, telf=TEL_FMT, serv=L("/servicos/"),
+                   portf=L("/#portfolio"), blog=L("/blog/"), cont=L("/contato/"))
 
 
-def footer_html():
+def footer_html(page):
+    L = lambda d: link(page, d)
     links = "\n".join(
-        '            <li><a href="/servicos/%s/">%s</a></li>' % (s, l) for s, l in SERVICES)
+        '            <li><a href="%s">%s</a></li>' % (L("/servicos/%s/" % s), l)
+        for s, l in SERVICES)
     return """<footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="/" class="logo" style="margin-bottom: 14px;">
-            <img src="/assets/img/logo-5g-serralheria.webp" alt="Logo Oficial 5G Serralheria" class="logo-img" width="52" height="52">
+          <a href="{home}" class="logo" style="margin-bottom: 14px;">
+            <img src="{logo}" alt="Logo Oficial 5G Serralheria" class="logo-img" width="52" height="52">
           </a>
           <p style="color: var(--text-muted); font-size: 0.88rem;">Mais de 10 anos de tradição e excelência em escadas de ferro e estruturas metálicas em São Paulo.</p>
         </div>
@@ -134,11 +162,11 @@ def footer_html():
         <div class="footer-col">
           <h4>Empresa</h4>
           <ul>
-            <li><a href="/#diferenciais">Diferenciais</a></li>
-            <li><a href="/#portfolio">Portfólio</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contato/">Contato</a></li>
-            <li><a href="/#faq">Perguntas Frequentes</a></li>
+            <li><a href="{difer}">Diferenciais</a></li>
+            <li><a href="{portf}">Portfólio</a></li>
+            <li><a href="{blog}">Blog</a></li>
+            <li><a href="{cont}">Contato</a></li>
+            <li><a href="{faq}">Perguntas Frequentes</a></li>
           </ul>
         </div>
 
@@ -159,7 +187,10 @@ def footer_html():
         <span>São Paulo - SP · Orçamento Gratuito</span>
       </div>
     </div>
-  </footer>""".format(links=links, wa=WA, tel=TEL, telf=TEL_FMT)
+  </footer>""".format(links=links, wa=WA, tel=TEL, telf=TEL_FMT,
+                      home=L("/"), logo=L("/assets/img/logo-5g-serralheria.webp"),
+                      difer=L("/#diferenciais"), portf=L("/#portfolio"),
+                      blog=L("/blog/"), cont=L("/contato/"), faq=L("/#faq"))
 
 
 def integridade(s):
@@ -192,7 +223,7 @@ def apply(page):
 
     if not re.search(r"<footer[^>]*>.*?</footer>", s, re.S):
         return "SEM FOOTER"
-    s = re.sub(r"<footer[^>]*>.*?</footer>", lambda m: footer_html(), s, count=1, flags=re.S)
+    s = re.sub(r"<footer[^>]*>.*?</footer>", lambda m: footer_html(page), s, count=1, flags=re.S)
 
     # ---- trava de integridade -------------------------------------------
     # Uma regex de substituição mal ancorada já apagou o hero inteiro da home
