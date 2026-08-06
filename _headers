@@ -1,21 +1,26 @@
-# Cloudflare Pages - Header rules for maximum static performance
+# Cloudflare Pages - regras de header do site estatico
+# (o GitHub Pages ignora este arquivo; ele passa a valer no deploy do Cloudflare)
 
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  # HSTS sem includeSubDomains: vale so para este host, nao afeta ayamdigital.com.br
+  Strict-Transport-Security: max-age=31536000
+  # O site nao usa nenhuma destas APIs; negar reduz a superficie de ataque
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
 
-# Immuntable Cache for WebP Images
+# Cache imutavel para imagens WebP
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache for CSS and JS
+# Cache para CSS e JS
 /assets/css/*
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/js/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML Pages (short revalidation)
+# Paginas HTML (revalidacao curta)
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
