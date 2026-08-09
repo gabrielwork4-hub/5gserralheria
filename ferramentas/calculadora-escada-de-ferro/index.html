@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Calculadora de Escada de Ferro: Degraus, Espelho e Piso | 5G Serralheria</title>
+  <meta name="description" content="Calcule quantos degraus a sua escada precisa a partir do pé-direito, com espelho, piso e comprimento ocupado. Verificação automática pela regra de Blondel. Grátis.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#0F1115">
+
+  <link rel="canonical" href="https://5gserralheria.ayamdigital.com.br/ferramentas/calculadora-escada-de-ferro/">
+
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="../../assets/img/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="5G Serralheria">
+  <meta property="og:title" content="Calculadora de Escada de Ferro: Degraus, Espelho e Piso">
+  <meta property="og:description" content="Informe o pé-direito e receba o número de degraus, a altura do espelho, a largura do piso e o comprimento que a escada vai ocupar.">
+  <meta property="og:url" content="https://5gserralheria.ayamdigital.com.br/ferramentas/calculadora-escada-de-ferro/">
+  <meta property="og:image" content="https://5gserralheria.ayamdigital.com.br/assets/img/og-5g-serralheria.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="5G Serralheria - escadas de ferro e serralheria sob medida em São Paulo">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Escada de Ferro: Degraus, Espelho e Piso">
+  <meta name="twitter:description" content="Informe o pé-direito e receba o número de degraus, a altura do espelho, a largura do piso e o comprimento que a escada vai ocupar.">
+  <meta name="twitter:image" content="https://5gserralheria.ayamdigital.com.br/assets/img/og-5g-serralheria.jpg">
+
+  <link rel="preload" href="../../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="../../assets/css/main.css">
+  <link rel="stylesheet" href="../../assets/css/blog.css">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17926586201"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17926586201');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "@id": "https://5gserralheria.ayamdigital.com.br/ferramentas/calculadora-escada-de-ferro/#app",
+    "name": "Calculadora de Escada de Ferro",
+    "url": "https://5gserralheria.ayamdigital.com.br/ferramentas/calculadora-escada-de-ferro/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Qualquer navegador web",
+    "inLanguage": "pt-BR",
+    "browserRequirements": "Requer JavaScript habilitado",
+    "description": "Calcula o número de degraus, a altura do espelho, a largura do piso e o comprimento ocupado por uma escada a partir da altura entre pisos acabados, verificando o resultado pela regra de Blondel.",
+    "featureList": [
+      "Número de degraus a partir do pé-direito",
+      "Altura do espelho e largura do piso",
+      "Comprimento total ocupado pela escada reta",
+      "Verificação pela regra de Blondel (2e + p entre 63 cm e 65 cm)",
+      "Comparação de alternativas com mais e menos degraus"
+    ],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "BRL" },
+    "publisher": { "@id": "https://5gserralheria.ayamdigital.com.br/#organizacao" },
+    "author": { "@id": "https://5gserralheria.ayamdigital.com.br/sobre/#aloisio-marques" },
+    "isAccessibleForFree": true
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://5gserralheria.ayamdigital.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Ferramentas", "item": "https://5gserralheria.ayamdigital.com.br/ferramentas/" },
+      { "@type": "ListItem", "position": 3, "name": "Calculadora de Escada de Ferro", "item": "https://5gserralheria.ayamdigital.com.br/ferramentas/calculadora-escada-de-ferro/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quantos degraus tem uma escada de 2,80 m de pé-direito?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "16 degraus, com espelho de 17,5 cm. Aplicando a regra de Blondel, o piso correspondente fica em 29,0 cm e a escada reta ocupa 4,35 m de comprimento no chão. A altura precisa ser medida do piso acabado ao piso acabado do andar de cima, incluindo a espessura da laje e do revestimento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é a regra de Blondel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É a relação que garante que o degrau acompanhe o passo humano: duas vezes a altura do espelho mais a largura do piso deve resultar entre 63 cm e 65 cm. Um degrau pode ter espelho e piso dentro das faixas aceitáveis isoladamente e ainda assim ser desconfortável se essa soma cair fora do intervalo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a altura ideal do degrau de uma escada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entre 17 cm e 18,5 cm de espelho para uso residencial. Acima disso a subida cansa; abaixo, a escada consome comprimento no chão sem necessidade. A largura do piso deve ter no mínimo 27 cm, com o intervalo entre 28 cm e 30 cm sendo o mais confortável."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A calculadora substitui a visita técnica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Ela dimensiona o degrau a partir da altura entre pisos e serve para você saber se a escada cabe no espaço disponível antes de pedir orçamento. O projeto final depende de conferir apoio estrutural, altura livre de passagem, acesso para a instalação e as exigências da vistoria aplicável, o que só é possível medindo no local."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-container">
+      <a href="../../" class="logo" aria-label="Página inicial da 5G Serralheria">
+        <img src="../../assets/img/logo-5g-serralheria.webp" alt="Logo Oficial 5G Serralheria" class="logo-img" width="52" height="52">
+      </a>
+
+      <nav class="nav-links" aria-label="Menu principal">
+        <div class="nav-item-dropdown">
+          <a href="../../servicos/" class="nav-link">Serviços<span class="nav-caret" aria-hidden="true"></span></a>
+          <div class="nav-dropdown">
+            <a href="../../servicos/escadas-de-ferro/" class="active">Escadas de Ferro</a>
+            <a href="../../servicos/corrimao-e-guarda-corpo/">Corrimãos e Guarda-Corpos</a>
+            <a href="../../servicos/portoes-de-ferro/">Portões Manuais e Automáticos</a>
+            <a href="../../servicos/mezaninos-metalicos/">Mezaninos Metálicos</a>
+            <a href="../../servicos/coberturas-metalicas/">Coberturas Metálicas</a>
+            <a href="../../servicos/grades-e-manutencao/">Grades, Solda e Manutenção</a>
+            <a href="../../servicos/" class="nav-dropdown-all">Ver todos os serviços</a>
+          </div>
+        </div>
+        <a href="../../#portfolio" class="nav-link">Portfólio</a>
+        <a href="../../blog/" class="nav-link">Blog</a>
+        <a href="../../contato/" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+5511966408235" class="phone-link">(11) 96640-8235</a>
+        <a href="https://wa.me/5511966408235?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-accent" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <span class="mobile-menu-label">Serviços</span>
+    <a href="../../servicos/" class="nav-link">Ver todos os serviços</a>
+    <a href="../../servicos/escadas-de-ferro/" class="nav-link sub active">Escadas de Ferro</a>
+    <a href="../../servicos/corrimao-e-guarda-corpo/" class="nav-link sub">Corrimãos e Guarda-Corpos</a>
+    <a href="../../servicos/portoes-de-ferro/" class="nav-link sub">Portões Manuais e Automáticos</a>
+    <a href="../../servicos/mezaninos-metalicos/" class="nav-link sub">Mezaninos Metálicos</a>
+    <a href="../../servicos/coberturas-metalicas/" class="nav-link sub">Coberturas Metálicas</a>
+    <a href="../../servicos/grades-e-manutencao/" class="nav-link sub">Grades, Solda e Manutenção</a>
+    <span class="mobile-menu-label">Navegação</span>
+    <a href="../../#portfolio" class="nav-link">Portfólio</a>
+    <a href="../../blog/" class="nav-link">Blog</a>
+    <a href="../../contato/" class="nav-link">Contato</a>
+    <a href="https://wa.me/5511966408235?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-whatsapp" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <a href="tel:+5511966408235" class="mobile-phone">(11) 96640-8235</a>
+  </div>
+  
+  
+  
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Navegação de migalhas de pão">
+      <a href="../../">Início</a>
+      <span class="breadcrumb-separator">/</span>
+      <a href="../../ferramentas/">Ferramentas</a>
+      <span class="breadcrumb-separator">/</span>
+      <span class="breadcrumb-current">Calculadora de Escada</span>
+    </nav>
+  </div>
+
+
+  <main class="container section-padding" style="padding-top: 20px;">
+    <div class="blog-layout">
+      <article>
+        <header class="article-header">
+          <span class="badge">Ferramenta gratuita</span>
+          <h1 class="article-title">Calculadora de Escada de Ferro</h1>
+          <p style="color: var(--text-muted); font-size: 1.05rem;">Informe a altura entre os pisos acabados e veja quantos degraus a escada precisa, qual o espelho e o piso de cada degrau, e quanto comprimento ela vai ocupar no chão.</p>
+        </header>
+
+        <!-- CALCULADORA -->
+        <section class="calc-box" aria-labelledby="calc-titulo">
+          <h2 id="calc-titulo" class="calc-titulo">Calcular minha escada</h2>
+
+          <form id="calcForm" class="calc-form" novalidate>
+            <div class="calc-field">
+              <label for="altura">Altura entre pisos acabados <span aria-hidden="true">*</span></label>
+              <div class="calc-input-wrap">
+                <input type="number" id="altura" name="altura" inputmode="decimal" step="1" min="100" max="600" placeholder="280" required aria-describedby="altura-hint">
+                <span class="calc-unit">cm</span>
+              </div>
+              <small id="altura-hint">Do piso acabado de baixo ao piso acabado de cima, incluindo laje e revestimento.</small>
+            </div>
+
+            <div class="calc-field">
+              <label for="comprimento">Comprimento livre disponível <small>(opcional)</small></label>
+              <div class="calc-input-wrap">
+                <input type="number" id="comprimento" name="comprimento" inputmode="decimal" step="1" min="50" max="2000" placeholder="450" aria-describedby="comp-hint">
+                <span class="calc-unit">cm</span>
+              </div>
+              <small id="comp-hint">Espaço no chão onde a escada vai desembocar. Se informado, avisamos se cabe.</small>
+            </div>
+
+            <button type="submit" class="btn btn-accent calc-submit">Calcular</button>
+          </form>
+
+          <div id="calcErro" class="calc-erro" role="alert" hidden></div>
+
+          <div id="calcResultado" class="calc-resultado" role="region" aria-live="polite" hidden></div>
+
+          <noscript>
+            <p class="calc-erro" style="display:block">A calculadora precisa de JavaScript. Sem ele, use a <a href="#tabela">tabela de referência</a> logo abaixo, que traz os mesmos resultados para os pés-direitos mais comuns.</p>
+          </noscript>
+        </section>
+
+        <div class="article-body">
+          <h2 id="tabela">Tabela de referência: degraus por pé-direito</h2>
+          <p>Os valores abaixo saem do mesmo cálculo da ferramenta, para as alturas mais comuns em residência. O piso é derivado do espelho pela regra de Blondel e o comprimento considera escada reta, sem patamar.</p>
+
+          <div class="tabela-scroll">
+            <table class="tabela-dados">
+              <caption>Dimensionamento de escada reta por altura entre pisos acabados, com espelho alvo de 17,5 cm.</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Pé-direito</th>
+                  <th scope="col">Degraus</th>
+                  <th scope="col">Espelho</th>
+                  <th scope="col">Piso</th>
+                  <th scope="col">Comprimento</th>
+                </tr>
+              </thead>
+              <tbody>
+            <tr><td>2,40 m</td><td>14</td><td>17,1 cm</td><td>29,7 cm</td><td>3,86 m</td></tr>
+            <tr><td>2,50 m</td><td>14</td><td>17,9 cm</td><td>28,3 cm</td><td>3,68 m</td></tr>
+            <tr><td>2,60 m</td><td>15</td><td>17,3 cm</td><td>29,3 cm</td><td>4,11 m</td></tr>
+            <tr><td>2,70 m</td><td>15</td><td>18,0 cm</td><td>28,0 cm</td><td>3,92 m</td></tr>
+            <tr><td>2,80 m</td><td>16</td><td>17,5 cm</td><td>29,0 cm</td><td>4,35 m</td></tr>
+            <tr><td>2,90 m</td><td>17</td><td>17,1 cm</td><td>29,9 cm</td><td>4,78 m</td></tr>
+            <tr><td>3,00 m</td><td>17</td><td>17,6 cm</td><td>28,7 cm</td><td>4,59 m</td></tr>
+            <tr><td>3,10 m</td><td>18</td><td>17,2 cm</td><td>29,6 cm</td><td>5,02 m</td></tr>
+            <tr><td>3,20 m</td><td>18</td><td>17,8 cm</td><td>28,4 cm</td><td>4,84 m</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Como o cálculo é feito</h2>
+          <p>A conta parte de um espelho alvo de <strong>17,5 cm</strong>, o centro da faixa confortável para uso residencial. O número de degraus é a altura total dividida por esse alvo, arredondada para o inteiro mais próximo — porque não existe meio degrau. O espelho real é então a altura dividida por esse número inteiro, o que garante degraus todos iguais.</p>
+          <p>A largura do piso vem da <strong>regra de Blondel</strong>: duas vezes o espelho mais o piso deve dar entre 63 cm e 65 cm. A ferramenta usa 64 cm, o centro da faixa. Quando essa conta resultaria em piso menor que 27 cm, o valor é travado em 27 cm, que é o mínimo para o pé apoiar inteiro.</p>
+          <p>O comprimento ocupado é o número de pisos multiplicado pela largura de cada um. Note que uma escada de 16 degraus tem 15 pisos: o último degrau é o próprio andar de cima.</p>
+
+          <h2>O que a calculadora não faz</h2>
+          <p>Ela dimensiona o degrau. Não substitui o projeto, e há quatro coisas que só a visita técnica resolve:</p>
+          <ul>
+            <li><strong>Apoio estrutural:</strong> se a laje ou a parede onde a escada vai se apoiar aguenta a carga.</li>
+            <li><strong>Altura livre de passagem:</strong> a distância da linha dos degraus até a laje acima. Abaixo de 2 m, alguém bate a cabeça — e isso não aparece em nenhuma conta de espelho e piso.</li>
+            <li><strong>Acesso para instalação:</strong> por onde a estrutura entra no imóvel. É o fator que mais muda orçamento depois de fechado.</li>
+            <li><strong>Exigência de vistoria:</strong> uso comercial, mezanino e saída de emergência têm regras próprias, mais rígidas que a referência residencial.</li>
+          </ul>
+
+          <h2>Se a escada não couber no comprimento disponível</h2>
+          <p>É a situação mais comum em reforma. Três saídas, nessa ordem de preferência:</p>
+          <ol>
+            <li><strong>Escada em L com patamar:</strong> dobra o percurso em 90°, cabendo num canto. O patamar ainda funciona como descanso e como anteparo em caso de queda.</li>
+            <li><strong>Escada em U:</strong> dobra sobre si mesma, para caixa de escada estreita.</li>
+            <li><strong>Escada caracol:</strong> ocupa só o raio do próprio diâmetro, entre 1,20 m e 1,50 m. Resolve o espaço, mas a pisada fica estreita junto ao eixo e móvel não sobe.</li>
+          </ol>
+          <p>O que <strong>não</strong> é saída: aumentar o espelho para reduzir o número de degraus. Acima de 19 cm a escada fica cansativa e perigosa, e é assim que nasce a maioria das escadas ruins que encontramos em obra de terceiros.</p>
+
+          <h2>Perguntas frequentes</h2>
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-btn"><span>Quantos degraus tem uma escada de 2,80 m de pé-direito?</span><span class="faq-icon"></span></button>
+              <div class="faq-content"><p>16 degraus, com espelho de 17,5 cm. Aplicando a regra de Blondel, o piso correspondente fica em 29,0 cm e a escada reta ocupa 4,35 m de comprimento no chão. A altura precisa ser medida do piso acabado ao piso acabado do andar de cima, incluindo a espessura da laje e do revestimento.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn"><span>O que é a regra de Blondel?</span><span class="faq-icon"></span></button>
+              <div class="faq-content"><p>É a relação que garante que o degrau acompanhe o passo humano: duas vezes a altura do espelho mais a largura do piso deve resultar entre 63 cm e 65 cm. Um degrau pode ter espelho e piso dentro das faixas aceitáveis isoladamente e ainda assim ser desconfortável se essa soma cair fora do intervalo.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn"><span>Qual a altura ideal do degrau de uma escada?</span><span class="faq-icon"></span></button>
+              <div class="faq-content"><p>Entre 17 cm e 18,5 cm de espelho para uso residencial. Acima disso a subida cansa; abaixo, a escada consome comprimento no chão sem necessidade. A largura do piso deve ter no mínimo 27 cm, com o intervalo entre 28 cm e 30 cm sendo o mais confortável.</p></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-btn"><span>A calculadora substitui a visita técnica?</span><span class="faq-icon"></span></button>
+              <div class="faq-content"><p>Não. Ela dimensiona o degrau a partir da altura entre pisos e serve para você saber se a escada cabe no espaço disponível antes de pedir orçamento. O projeto final depende de conferir apoio estrutural, altura livre de passagem, acesso para a instalação e as exigências da vistoria aplicável, o que só é possível medindo no local.</p></div>
+            </div>
+          </div>
+
+          <h2>Leia também</h2>
+          <ul>
+            <li><a href="../../blog/como-escolher-escada-de-ferro/">Como escolher a escada de ferro ideal</a> — formatos, estrutura, tipos de degrau e acabamento.</li>
+            <li><a href="../../blog/quanto-custa-escada-de-ferro-sao-paulo/">Quanto custa uma escada de ferro em São Paulo</a> — o que forma o preço.</li>
+            <li><a href="../../blog/norma-nbr-14718-guarda-corpo-altura-seguranca/">NBR 14718: altura de guarda-corpo</a> — a proteção que acompanha a escada.</li>
+          </ul>
+
+          <div style="margin-top: 32px; background: var(--surface); padding: 32px; border-radius: 16px; border: 1px solid var(--border); text-align: center;">
+            <h3 style="margin-top: 0; color: #FFFFFF;">Já sabe as medidas? Peça o orçamento</h3>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">Mande o resultado do cálculo e fotos do local pelo WhatsApp. O orçamento é gratuito.</p>
+            <a href="https://wa.me/5511966408235?text=Ol%C3%A1!%20Usei%20a%20calculadora%20de%20escada%20e%20gostaria%20de%20um%20or%C3%A7amento." class="btn btn-whatsapp" target="_blank" rel="noopener">Falar no WhatsApp: (11) 96640-8235</a>
+          </div>
+        </div>
+      </article>
+
+      <aside class="sidebar">
+        <div class="sidebar-widget cta-widget">
+          <h3>Página do Serviço</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Fabricamos escadas retas, em L, em U e caracol sob medida em São Paulo.</p>
+          <a href="../../servicos/escadas-de-ferro/" class="btn btn-outline" style="width: 100%;">Ver Escadas de Ferro</a>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Leia também</h3>
+          <ul class="category-list">
+            <li><a href="../../blog/como-escolher-escada-de-ferro/">Como escolher a escada de ferro ideal</a></li>
+            <li><a href="../../blog/quanto-custa-escada-de-ferro-sao-paulo/">Quanto custa uma escada de ferro em SP</a></li>
+            <li><a href="../../blog/norma-nbr-14718-guarda-corpo-altura-seguranca/">NBR 14718: altura de guarda-corpo</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget cta-widget">
+          <h3>Orçamento Grátis</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Atendemos toda a cidade de São Paulo e Grande SP.</p>
+          <a href="https://wa.me/5511966408235" class="btn btn-whatsapp" style="width: 100%;" target="_blank" rel="noopener">WhatsApp Direto</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="../../" class="logo" style="margin-bottom: 14px;">
+            <img src="../../assets/img/logo-5g-serralheria.webp" alt="Logo Oficial 5G Serralheria" class="logo-img" width="52" height="52">
+          </a>
+          <p style="color: var(--text-muted); font-size: 0.88rem;">Mais de 10 anos de tradição e excelência em escadas de ferro e estruturas metálicas em São Paulo.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="../../servicos/escadas-de-ferro/">Escadas de Ferro</a></li>
+            <li><a href="../../servicos/corrimao-e-guarda-corpo/">Corrimãos e Guarda-Corpos</a></li>
+            <li><a href="../../servicos/portoes-de-ferro/">Portões Manuais e Automáticos</a></li>
+            <li><a href="../../servicos/mezaninos-metalicos/">Mezaninos Metálicos</a></li>
+            <li><a href="../../servicos/coberturas-metalicas/">Coberturas Metálicas</a></li>
+            <li><a href="../../servicos/grades-e-manutencao/">Grades, Solda e Manutenção</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="../../sobre/">Sobre a 5G</a></li>
+            <li><a href="../../#diferenciais">Diferenciais</a></li>
+            <li><a href="../../#portfolio">Portfólio</a></li>
+            <li><a href="../../ferramentas/">Ferramentas</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../contato/">Contato</a></li>
+            <li><a href="../../#faq">Perguntas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5511966408235?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp: (11) 96640-8235</a></li>
+            <li><a href="tel:+5511966408235">Telefone: (11) 96640-8235</a></li>
+            <li><a href="mailto:spg.vendas@hotmail.com">spg.vendas@hotmail.com</a></li>
+            <li><span style="color: var(--text-muted);">Estrada M'Boi Mirim, 3355 — São Paulo/SP</span></li>
+            <li><span style="color: var(--text-muted);">Seg a Sex, 08h às 18h</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 5G Serralheria. Todos os direitos reservados.</span>
+        <span>São Paulo - SP · Orçamento Gratuito</span>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5511966408235?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Falar pelo WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <script src="../../assets/js/main.js" defer></script>
+  <script src="../../assets/js/calculadora.js" defer></script>
+</body>
+</html>

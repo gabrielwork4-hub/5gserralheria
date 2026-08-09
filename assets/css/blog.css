@@ -305,3 +305,123 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Calculadora de escada e tabelas de dados
+   -------------------------------------------------------------------------- */
+.calc-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin: 32px 0;
+}
+.calc-titulo { margin: 0 0 20px; font-size: 1.25rem; color: var(--text-main); }
+
+.calc-form { display: grid; gap: 20px; }
+@media (min-width: 620px) {
+  .calc-form { grid-template-columns: 1fr 1fr auto; align-items: end; }
+}
+.calc-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.calc-field label { font-weight: 600; font-size: 0.92rem; color: var(--text-main); }
+.calc-field label small { font-weight: 400; color: var(--text-dim); }
+.calc-field small { font-size: 0.8rem; color: var(--text-dim); line-height: 1.45; }
+
+.calc-input-wrap { position: relative; display: flex; align-items: center; }
+.calc-input-wrap input {
+  width: 100%;
+  padding: 13px 46px 13px 14px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.calc-input-wrap input:focus {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: 1px;
+  border-color: var(--accent-orange);
+}
+.calc-unit {
+  position: absolute;
+  right: 14px;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+  pointer-events: none;
+}
+.calc-submit { white-space: nowrap; }
+
+.calc-erro {
+  margin-top: 18px;
+  padding: 13px 16px;
+  background: rgba(220, 60, 50, 0.12);
+  border: 1px solid rgba(220, 60, 50, 0.45);
+  border-radius: var(--radius-sm);
+  color: #FFB4AE;
+  font-size: 0.92rem;
+}
+
+.calc-resultado { margin-top: 28px; border-top: 1px solid var(--border); padding-top: 24px; }
+.calc-resultado-titulo { margin: 0 0 18px; font-size: 1.05rem; color: var(--text-main); }
+
+.calc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+.calc-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.calc-card-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.15;
+}
+.calc-card-lbl { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.calc-blondel { margin-top: 18px; font-size: 0.92rem; color: var(--text-muted); }
+.calc-avisos { margin: 16px 0 0; padding-left: 20px; display: grid; gap: 8px; }
+.calc-avisos li { font-size: 0.92rem; }
+.calc-aviso-alerta { color: #E8B36B; }
+.calc-aviso-ok { color: var(--whatsapp-green); }
+.calc-resultado h4 { margin: 26px 0 12px; font-size: 1rem; color: var(--text-main); }
+.calc-rodape { margin-top: 20px; font-size: 0.85rem; color: var(--text-dim); }
+.calc-cta { margin-top: 18px; display: inline-block; }
+
+.tabela-scroll { overflow-x: auto; margin: 18px 0; }
+.tabela-dados {
+  width: 100%;
+  min-width: 480px;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+  font-variant-numeric: tabular-nums;
+}
+.tabela-dados caption {
+  caption-side: bottom;
+  padding-top: 12px;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  text-align: left;
+}
+.tabela-dados th,
+.tabela-dados td { padding: 11px 14px; border-bottom: 1px solid var(--border); text-align: left; }
+.tabela-dados thead th {
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.tabela-dados tbody tr:last-child td { border-bottom: none; }

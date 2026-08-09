@@ -38,6 +38,11 @@ serralheiro.
 - [Grades, solda e manutenção](https://5gserralheria.ayamdigital.com.br/servicos/grades-e-manutencao/): grades de proteção, reforma de estruturas de ferro e reparos de solda.
 - [Visão geral dos serviços](https://5gserralheria.ayamdigital.com.br/servicos/)
 
+## Ferramentas gratuitas
+
+- [Calculadora de escada de ferro](https://5gserralheria.ayamdigital.com.br/ferramentas/calculadora-escada-de-ferro/): a partir da altura entre pisos acabados, calcula o número de degraus, a altura do espelho, a largura do piso e o comprimento ocupado, verificando o resultado pela regra de Blondel (2e + p entre 63 cm e 65 cm). A página traz também uma tabela de referência estática com o dimensionamento para pés-direitos de 2,40 m a 3,20 m. Exemplo: 2,80 m resultam em 16 degraus, espelho de 17,5 cm, piso de 29,0 cm e 4,35 m de comprimento.
+- [Índice de ferramentas](https://5gserralheria.ayamdigital.com.br/ferramentas/)
+
 ## Conteúdo técnico
 
 - [NBR 14718: altura de guarda-corpo e regras de segurança](https://5gserralheria.ayamdigital.com.br/blog/norma-nbr-14718-guarda-corpo-altura-seguranca/): altura mínima, teste da esfera de 11 cm, regra do não escalável, resistência exigida e diferença entre corrimão e guarda-corpo.
