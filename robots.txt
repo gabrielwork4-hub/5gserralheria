@@ -1,10 +1,45 @@
+# 5G Serralheria - https://5gserralheria.ayamdigital.com.br/
+# Site institucional. Todo o conteudo e publico e pode ser rastreado.
+
 User-agent: *
 Allow: /
 
-# Pastas de trabalho - nao sao conteudo do site
-Disallow: /design-referencia/
-Disallow: /claude-seo/
-Disallow: /claude%20SEO/
-Disallow: /5gserralheria-audit/
+# --- Buscadores tradicionais ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Crawlers de IA / motores generativos ---
+# Liberados de forma explicita: queremos que a 5G Serralheria seja
+# encontrada e citada como fonte em respostas geradas por IA.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://5gserralheria.ayamdigital.com.br/sitemap.xml
