@@ -98,8 +98,12 @@ for p in P:
         e("sem dropdown de serviços")
     if "M'Boi Mirim" not in s:
         e("rodapé sem NAP")
-    if "fonts.googleapis" not in s:
-        e("sem a fonte Inter")
+    # A fonte passou a ser auto-hospedada (assets/fonts/inter-latin.woff2).
+    # Cada página precisa do preload; o @font-face vive no main.css.
+    if "assets/fonts/inter-latin.woff2" not in s:
+        e("sem preload da fonte Inter auto-hospedada")
+    if "fonts.googleapis" in s or "fonts.gstatic" in s:
+        e("voltou a carregar a fonte do Google Fonts (deve ser auto-hospedada)")
     if "AW-17926586201" not in s:
         e("sem a tag do Google Ads")
 

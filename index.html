@@ -37,10 +37,8 @@
   <meta name="twitter:description" content="Soluções sob medida com qualidade, segurança e acabamento profissional. Orçamento gratuito no WhatsApp: (11) 96640-8235.">
   <meta name="twitter:image" content="https://5gserralheria.ayamdigital.com.br/assets/img/og-5g-serralheria.jpg">
 
-  <!-- Preconnect Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Fonte auto-hospedada (Inter variable, subset latin) -->
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- CSS StyleSheets -->
   <link rel="stylesheet" href="assets/css/main.css">
@@ -55,6 +53,20 @@
   </script>
 
   <!-- Schema.org JSON-LD (SEO Local & E-E-A-T) -->
+  <!--
+    PENDENTE (Lote 1, item 7): adicionar "sameAs" ao bloco #organizacao abaixo,
+    logo depois de "logo", assim que tivermos as URLs dos perfis oficiais:
+
+      "sameAs": [
+        "https://www.google.com/maps/place/...",   <- Google Business Profile
+        "https://www.instagram.com/...",
+        "https://www.facebook.com/..."
+      ],
+
+    É o sinal que permite aos buscadores e aos modelos de IA resolverem
+    "5G Serralheria" como entidade real, ligando o site às avaliações e fotos
+    do Google Business Profile. Sem isso a entidade não se consolida.
+  -->
   <script type="application/ld+json">
   {
   "@context": "https://schema.org",
@@ -106,6 +118,7 @@
   },
   "founder": {
     "@type": "Person",
+    "@id": "https://5gserralheria.ayamdigital.com.br/sobre/#aloisio-marques",
     "name": "Aloísio Marques",
     "jobTitle": "Mestre Serralheiro e Fundador da 5G Serralheria"
   },
@@ -177,7 +190,7 @@
         "name": "Quanto custa uma escada de ferro ou serviço de serralheria?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O valor varia conforme o material, a metragem e a complexidade do projeto. Enviamos um orçamento gratuito e sem compromisso após avaliar fotos, medidas ou visita técnica."
+          "text": "O valor varia conforme o modelo (reta, caracol, L), o tipo de aço/ferro e as dimensões do local. Enviamos uma estimativa rápida e gratuita pelo WhatsApp após receber fotos ou medidas."
         }
       },
       {
@@ -185,7 +198,7 @@
         "name": "Quanto tempo leva para fabricar e instalar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O prazo depende do porte do projeto. Definimos uma data exata na visita técnica, depois de entender as medidas e o acabamento desejado."
+          "text": "Projetos residenciais padrão como escadas e corrimãos costumam levar de 5 a 10 dias úteis para fabricação. O prazo exato é combinado na visita técnica."
         }
       },
       {
@@ -193,7 +206,15 @@
         "name": "Vocês atendem toda São Paulo e Grande São Paulo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, atendemos a capital paulista e toda a Grande São Paulo."
+          "text": "Sim! Atendemos toda a capital de São Paulo (Zona Sul, Norte, Leste, Oeste e Centro) e municípios da Grande São Paulo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais as formas de pagamento aceitas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Facilitamos o pagamento em Pix, Dinheiro, Débito e Cartão de Crédito com parcelamento em até 24x."
         }
       },
       {
@@ -629,6 +650,16 @@
               <p>Facilitamos o pagamento em Pix, Dinheiro, Débito e Cartão de Crédito com parcelamento em até 24x.</p>
             </div>
           </div>
+
+          <div class="faq-item">
+            <button class="faq-btn">
+              <span>Posso enviar fotos e medidas pelo WhatsApp para um orçamento inicial?</span>
+              <span class="faq-icon"></span>
+            </button>
+            <div class="faq-content">
+              <p>Sim! Envie fotos do local, medidas aproximadas e referências, e retornamos com uma estimativa inicial pelo WhatsApp.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -673,8 +704,10 @@
         <div class="footer-col">
           <h4>Empresa</h4>
           <ul>
+            <li><a href="sobre/">Sobre a 5G</a></li>
             <li><a href="#diferenciais">Diferenciais</a></li>
             <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="ferramentas/">Ferramentas</a></li>
             <li><a href="blog/">Blog</a></li>
             <li><a href="contato/">Contato</a></li>
             <li><a href="#faq">Perguntas Frequentes</a></li>
