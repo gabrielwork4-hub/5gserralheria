@@ -11,6 +11,11 @@ claude SEO/
 # --- Originais não usados pelo site ---
 assets/img/_originais/
 
+# --- Onde foram parar os scripts ---
+# Não estão mais aqui. Ficam em 5gserralheria-audit/scripts/ (fora do Git),
+# porque este repositório contém só o site: tudo que está aqui vira URL pública.
+#   python 5gserralheria-audit/scripts/verify.py     ← rodar antes de cada deploy
+
 # --- Sistema operacional / editor ---
 Thumbs.db
 desktop.ini
