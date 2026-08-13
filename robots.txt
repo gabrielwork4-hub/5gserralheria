@@ -1,10 +1,8 @@
 User-agent: *
 Allow: /
 
-# Pastas de trabalho - nao sao conteudo do site
-Disallow: /design-referencia/
-Disallow: /claude-seo/
-Disallow: /claude%20SEO/
-Disallow: /5gserralheria-audit/
+# Nao ha o que bloquear: o repositorio contem so o site, entao nao existe
+# pasta de trabalho publicada. Os Disallow antigos apontavam para pastas que
+# hoje estao fora do Git - e listar caminho inexistente so denuncia caminho.
 
-Sitemap: https://5gserralheria.ayamdigital.com.br/sitemap.xml
+Sitemap: https://www.5gserralheria.com.br/sitemap.xml

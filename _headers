@@ -5,7 +5,9 @@
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  # HSTS sem includeSubDomains: vale so para este host, nao afeta ayamdigital.com.br
+  # HSTS sem includeSubDomains: o dominio e proprio (5gserralheria.com.br), mas
+  # so o www esta em producao. Incluir subdominios forcaria HTTPS em qualquer
+  # outro que venha a existir, antes de haver certificado para ele.
   Strict-Transport-Security: max-age=31536000
   # O site nao usa nenhuma destas APIs; negar reduz a superficie de ataque
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
