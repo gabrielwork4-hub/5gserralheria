@@ -7,6 +7,8 @@ claude SEO/
 # qualquer arquivo aqui vira URL pública. Esta pasta tem o plano de entrega,
 # o log de incidentes e o backup pré-migração — nada disso é para o cliente.
 5gserralheria-audit/
+auditoria/
+prompt-antigravity-auditoria-seo-geo.md
 
 # --- Originais não usados pelo site ---
 assets/img/_originais/
