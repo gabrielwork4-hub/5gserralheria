@@ -33,7 +33,7 @@
 
   /* Espaçamentos & Layout */
   --container-max: 1240px;
-  --header-height: 76px;
+  --header-height: 84px;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -292,16 +292,17 @@ ul, ol {
 }
 
 .logo-img {
-  height: 52px;
+  height: 64px;
   width: auto;
-  max-width: 200px;
+  max-width: 220px;
   object-fit: contain;
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), filter var(--transition-fast);
 }
 
 .logo-img:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
+  filter: drop-shadow(0 4px 14px rgba(208, 79, 0, 0.35));
 }
 
 .logo-icon {
@@ -884,6 +885,14 @@ ul, ol {
    14. Responsividade / Media Queries
    -------------------------------------------------------------------------- */
 @media (max-width: 992px) {
+  :root {
+    --header-height: 74px;
+  }
+
+  .logo-img {
+    height: 54px;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
   }
