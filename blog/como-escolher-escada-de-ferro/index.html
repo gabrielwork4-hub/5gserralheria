@@ -28,8 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/blog.css">
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20260818">
+  <link rel="stylesheet" href="../../assets/css/blog.css?v=20260818">
 
   <!-- Schema Article -->
 
@@ -97,12 +97,17 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="container header-container">
-      <a href="../../" class="logo" aria-label="Página inicial da 5G Serralheria">
-        <img src="../../assets/img/logo-5g-serralheria.webp" alt="Logo Oficial 5G Serralheria" class="logo-img" width="64" height="64">
-      </a>
+    <div class="header-main">
+      <div class="container header-container">
+        <a href="../../" class="logo" aria-label="Página inicial da 5G Serralheria">
+          <img src="../../assets/img/logo-5g-serralheria.webp" alt="Logo Oficial 5G Serralheria" class="logo-img" width="56" height="56">
+          <div class="logo-text">
+            <span class="logo-title">5G <span>Serralheria</span></span>
+            <span class="logo-subtitle">Estruturas & Serralheria</span>
+          </div>
+        </a>
 
-      <nav class="nav-links" aria-label="Menu principal">
+        <nav class="nav-links" aria-label="Menu principal">
         <div class="nav-item-dropdown">
           <a href="../../servicos/" class="nav-link">Serviços<span class="nav-caret" aria-hidden="true"></span></a>
           <div class="nav-dropdown">
@@ -120,16 +125,22 @@
         <a href="../../contato/" class="nav-link">Contato</a>
       </nav>
 
-      <div class="header-cta">
+        <div class="header-cta">
         <a href="tel:+5511966408235" class="phone-link">(11) 96640-8235</a>
         <a href="https://wa.me/5511966408235?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="btn btn-accent" target="_blank" rel="noopener">Falar no WhatsApp</a>
       </div>
+      </div>
+    </div>
 
-      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <!-- Barra Mobile com a cor da marca e botão de menu centralizado (Estilo Favaretto) -->
+    <div class="header-mobile-bar">
+      <div class="container mobile-bar-container">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
   <div class="mobile-menu" id="mobileMenu">
