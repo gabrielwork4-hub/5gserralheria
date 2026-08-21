@@ -1,64 +1,26 @@
-# 5G Serralheria — Serralheria Sob Medida em São Paulo
+# 5G Serralheria
 
-> A 5G Serralheria é uma empresa especializada no projeto, fabricação e instalação de estruturas metálicas sob medida em ferro, aço inox e alumínio para residências, comércios e indústrias em toda a Grande São Paulo.
+> Serralheria sob medida em São Paulo, com fabricação e instalação de estruturas metálicas em ferro, aço inox e alumínio.
 
-## Informações da Empresa & E-E-A-T
+## Informações verificáveis
 
-- **Nome**: 5G Serralheria
-- **Fundador & Mestre Serralheiro**: Aloísio Marques
-- **Experiência**: Mais de 10 anos de atuação em São Paulo e Região Metropolitana
-- **Endereço da Oficina**: Estrada M'Boi Mirim, 3355 - São Paulo, SP - CEP 04905-002
-- **Telefone / WhatsApp**: (11) 96640-8235
-- **E-mail**: spg.vendas@hotmail.com
-- **Horário de Atendimento**: Segunda a Sexta, das 08h às 18h
-- **Área de Atendimento**: Toda a Capital de São Paulo (Zona Sul, Zona Norte, Zona Leste, Zona Oeste, Centro) e Grande São Paulo.
+- Nome: 5G Serralheria
+- Contato: (11) 96640-8235 | spg.vendas@hotmail.com
+- Endereço: Estrada M'Boi Mirim, 3355, São Paulo/SP, CEP 04905-002
+- Atendimento: segunda a sexta, 08h às 18h
+- Site oficial: https://www.5gserralheria.com.br/
 
----
+## Páginas oficiais
 
-## Principais Serviços & Soluções Metálicas
+- [Serviços](https://www.5gserralheria.com.br/servicos/)
+- [Escadas de ferro](https://www.5gserralheria.com.br/servicos/escadas-de-ferro/)
+- [Corrimãos e guarda-corpos](https://www.5gserralheria.com.br/servicos/corrimao-e-guarda-corpo/)
+- [Portões de ferro](https://www.5gserralheria.com.br/servicos/portoes-de-ferro/)
+- [Mezaninos metálicos](https://www.5gserralheria.com.br/servicos/mezaninos-metalicos/)
+- [Coberturas metálicas](https://www.5gserralheria.com.br/servicos/coberturas-metalicas/)
+- [Grades, solda e manutenção](https://www.5gserralheria.com.br/servicos/grades-e-manutencao/)
+- [Blog](https://www.5gserralheria.com.br/blog/)
+- [Contato](https://www.5gserralheria.com.br/contato/)
+- [Sitemap](https://www.5gserralheria.com.br/sitemap.xml)
 
-### 1. Escadas de Ferro Sob Medida
-- **Modelos**: Escada reta, escada caracol (caracol helicoidal), escada em L, escada em U, escada Santos Dumont e escadas marinheiro.
-- **Materiais**: Aço carbono galvanizado, ferro estrutural, aço inox e degraus em madeira ou chapa xadrez antiderrapante.
-- **URL**: https://www.5gserralheria.com.br/servicos/escadas-de-ferro/
-
-### 2. Corrimãos e Guarda-Corpos
-- **Conformidade**: Fabricação em estrita conformidade com a norma **ABNT NBR 14718** (altura mínima de 1,00m a partir do piso acabado, vãos livres inferiores a 110mm e estrutura não escalável).
-- **Materiais**: Aço inox polido/escovado, tubo de ferro com pintura eletrostática ou primer anticorrosivo e combinações com vidro temperado.
-- **URL**: https://www.5gserralheria.com.br/servicos/corrimao-e-guarda-corpo/
-
-### 3. Portões Manuais e Automáticos
-- **Modelos**: Portões basculantes, deslizantes (de correr), pivotantes e sociais.
-- **Diferenciais**: Motores rápidos, travamento de segurança e tratamento antiferrugem.
-- **URL**: https://www.5gserralheria.com.br/servicos/portoes-de-ferro/
-
-### 4. Mezaninos Metálicos
-- **Aplicações**: Ampliação de área útil em galpões comerciais, escritórios, lojas e residências.
-- **Estrutura**: Vigas I / H / W de alta resistência com piso em painel wall, chapa antiderrapante ou compensado naval.
-- **URL**: https://www.5gserralheria.com.br/servicos/mezaninos-metalicos/
-
-### 5. Coberturas Metálicas
-- **Tipos**: Coberturas em telha termoacústica (sanduíche), telhas policarbonato compactas/alveolares e estruturas em aço galvanizado.
-- **URL**: https://www.5gserralheria.com.br/servicos/coberturas-metalicas/
-
-### 6. Grades, Solda e Manutenção
-- **Serviços**: Grades de proteção para janelas e varandas, reparos em solda MIG/TIG/Eletrodo e manutenção preventiva de estruturas metálicas.
-- **URL**: https://www.5gserralheria.com.br/servicos/grades-e-manutencao/
-
----
-
-## Guias Técnicos & Blog
-
-- **Norma NBR 14718 (Guarda-Corpo)**: https://www.5gserralheria.com.br/blog/norma-nbr-14718-guarda-corpo-altura-seguranca/
-- **Quanto custa escada de ferro em São Paulo**: https://www.5gserralheria.com.br/blog/quanto-custa-escada-de-ferro-sao-paulo/
-- **Como escolher o modelo de escada de ferro**: https://www.5gserralheria.com.br/blog/como-escolher-escada-de-ferro/
-
----
-
-## Mapa do Site & Links Principais
-
-- **Página Inicial**: https://www.5gserralheria.com.br/
-- **Todos os Serviços**: https://www.5gserralheria.com.br/servicos/
-- **Página de Contato**: https://www.5gserralheria.com.br/contato/
-- **Blog**: https://www.5gserralheria.com.br/blog/
-- **Sitemap XML**: https://www.5gserralheria.com.br/sitemap.xml
+As referências técnicas são informativas e não substituem projeto, visita técnica ou consulta às normas vigentes.
