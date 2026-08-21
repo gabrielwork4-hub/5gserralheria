@@ -16,6 +16,10 @@
 /assets/img/*
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
 # Cache para CSS e JS
 /assets/css/*
   Cache-Control: public, max-age=31536000, immutable
