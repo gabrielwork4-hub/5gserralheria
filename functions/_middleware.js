@@ -6,21 +6,13 @@
  * se fosse o conteudo real do site. Este middleware roda na borda, antes do
  * arquivo estatico, e devolve 503 de verdade.
  *
- * O modo nasce LIGADO: sem a variavel MAINTENANCE_MODE definida, o site
- * responde 503. Isso e deliberado — a ativacao nao depende de ninguem entrar
- * no painel, entao o deploy ja sobe com o site fora do ar.
- *
- * Para devolver o site ao ar, defina MAINTENANCE_MODE no painel do Cloudflare
- * Pages (Settings > Environment variables) com um destes valores:
- * 0, false, off, no, disabled. Qualquer outro valor mantem a manutencao.
+ * Liga/desliga: variavel de ambiente MAINTENANCE_MODE no painel do Cloudflare
+ * Pages (Settings > Environment variables). Valores aceitos como "ligado":
+ * 1, true, on, yes, enabled. Ausente ou qualquer outro valor = site normal.
  *
  * ATENCAO: no Cloudflare Pages, alterar uma variavel de ambiente so passa a
  * valer no deploy seguinte. Depois de mudar o valor, use "Retry deployment"
- * no ultimo deployment para aplicar sem precisar de commit. Reverter o commit
- * que ligou a manutencao tem o mesmo efeito e nao depende do painel.
- *
- * Nao existe expiracao automatica: uma vez ligado, o site permanece fora do ar
- * ate alguem desligar explicitamente.
+ * no ultimo deployment para aplicar sem precisar de commit.
  *
  * Nenhum arquivo do site e apagado ou alterado: quando o modo esta desligado
  * o middleware apenas repassa a requisicao com next().
@@ -37,15 +29,12 @@ const ALWAYS_AVAILABLE = new Set([
   '/favicon.ico',
 ]);
 
-// So estes valores devolvem o site ao ar. O default e ficar em manutencao:
-// um valor errado digitado no painel mantem o site fora, em vez de publicar
-// sem querer.
-const FALSY = new Set(['0', 'false', 'off', 'no', 'disabled']);
+const TRUTHY = new Set(['1', 'true', 'on', 'yes', 'enabled']);
 
 function maintenanceEnabled(env) {
   const raw = env && env.MAINTENANCE_MODE;
-  if (typeof raw !== 'string') return true;
-  return !FALSY.has(raw.trim().toLowerCase());
+  if (typeof raw !== 'string') return false;
+  return TRUTHY.has(raw.trim().toLowerCase());
 }
 
 /**
